@@ -1,0 +1,71 @@
+.hero {
+  margin: 0 auto;
+  height: 400px;
+  text-align: center;
+
+  background-image: linear-gradient(
+      to right,
+      $hero-overlay,
+      $hero-overlay
+    ),
+    url("../../img/hero-background-mob.jpeg");
+
+  background-repeat: no-repeat;
+  
+  margin-bottom: 60px;
+
+  @media screen and (min-width: $tablet) {
+    background-image: linear-gradient(
+      to right,
+      $hero-overlay,
+      $hero-overlay
+    ),
+    url("../../img/hero-background-tab.jpeg");
+  }
+
+  @media screen and (min-width: $desktop) {
+  background-image: linear-gradient(
+      to right,
+      $hero-overlay,
+      $hero-overlay
+    ),
+    url("../../img/hero-background.jpg");
+
+  margin-bottom: 94px;
+
+  height: 600px;
+  }
+
+&--flex {
+  @extend %flex-center;
+  flex-direction: column;
+  height: 100%;
+}
+
+&__title {
+  width: 360px;
+  @include font(26px, 900, calc(42 / 26));
+
+  color: $main-background-color;
+
+  @media screen and (min-width: $desktop) {
+    width: 696px;
+  @include font(44px, 900, calc(60 / 44));
+  }
+}
+
+&__button {
+  color: $second-text-color;
+  @include font(16px, 700, calc(30 / 16));
+  @include sizes(200px, 50px);
+  
+  border-radius: 4px;
+  background: $logo-color;
+  border: none;
+  margin-top: 30px;
+
+  @media screen and (min-width: $desktop) {
+  width: 216px;
+  }
+}
+}
