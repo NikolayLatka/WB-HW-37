@@ -870,6 +870,7 @@
               required
               minlength="13"
               maxlength="13"
+              pattern="\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}"
               title="Номер телефону введений некоректно! Приклад:+380000000000"
             />
             <svg class="modal__svg" width="13px" height="13px">
@@ -884,6 +885,7 @@
               required
               minlength="4"
               maxlength="10"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               title="Адрес електронної почти введений некоректно! Приклад:example@mail.com"
             />
             <svg class="modal__svg" width="15px" height="12px">
